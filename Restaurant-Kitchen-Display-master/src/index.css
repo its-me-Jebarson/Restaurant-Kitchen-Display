@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 235 25% 8%;
+    --foreground: 220 30% 95%;
+
+    --card: 240 20% 12%;
+    --card-foreground: 220 30% 95%;
+
+    --popover: 240 20% 12%;
+    --popover-foreground: 220 30% 95%;
+
+    --primary: 245 80% 62%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 18% 18%;
+    --secondary-foreground: 230 25% 80%;
+
+    --muted: 240 15% 16%;
+    --muted-foreground: 230 15% 50%;
+
+    --accent: 260 60% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 80% 58%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 15% 22%;
+    --input: 240 15% 20%;
+    --ring: 245 80% 62%;
+
+    --radius: 1rem;
+
+    /* KDS-specific tokens */
+    --kds-rush: 0 80% 58%;
+    --kds-delayed: 0 75% 55%;
+    --kds-new: 220 85% 60%;
+    --kds-ready: 160 80% 45%;
+    --kds-warning: 38 95% 55%;
+    --kds-income: 160 80% 50%;
+    --kds-prep: 245 80% 62%;
+    --kds-card-border-delayed: 0 60% 40%;
+    --kds-card-border-new: 220 60% 45%;
+    --kds-card-border-ready: 160 60% 38%;
+    --kds-card-border-default: 240 15% 25%;
+    --kds-stat-bg: 240 20% 14%;
+
+    --sidebar-background: 235 25% 8%;
+    --sidebar-foreground: 220 30% 95%;
+    --sidebar-primary: 245 80% 62%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 260 60% 55%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 240 15% 22%;
+    --sidebar-ring: 245 80% 62%;
+  }
+
+  .light {
+    --background: 240 20% 97%;
+    --foreground: 235 30% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 235 30% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 235 30% 12%;
+    --primary: 245 75% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 20% 92%;
+    --secondary-foreground: 235 25% 25%;
+    --muted: 240 18% 94%;
+    --muted-foreground: 230 15% 42%;
+    --accent: 260 55% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 78% 52%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 15% 85%;
+    --input: 240 15% 85%;
+    --ring: 245 75% 55%;
+    --kds-rush: 0 78% 52%;
+    --kds-delayed: 0 75% 50%;
+    --kds-new: 220 80% 52%;
+    --kds-ready: 160 75% 38%;
+    --kds-warning: 38 90% 48%;
+    --kds-income: 160 75% 35%;
+    --kds-prep: 245 75% 55%;
+    --kds-card-border-delayed: 0 55% 65%;
+    --kds-card-border-new: 220 55% 65%;
+    --kds-card-border-ready: 160 55% 60%;
+    --kds-card-border-default: 240 15% 82%;
+    --kds-stat-bg: 240 18% 96%;
+    --sidebar-background: 240 20% 97%;
+    --sidebar-foreground: 235 30% 12%;
+    --sidebar-primary: 245 75% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 260 55% 50%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 240 15% 85%;
+    --sidebar-ring: 245 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(245 80% 62%), hsl(260 60% 55%));
+  }
+  .gradient-card {
+    background: linear-gradient(145deg, hsl(240 20% 14%), hsl(240 20% 10%));
+  }
+  .shadow-glow {
+    box-shadow: 0 0 20px -5px hsl(245 80% 62% / 0.3);
+  }
+  .shadow-glow-accent {
+    box-shadow: 0 0 20px -5px hsl(260 60% 55% / 0.3);
+  }
+}
